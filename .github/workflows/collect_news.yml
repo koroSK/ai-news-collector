@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *'  # 毎朝9時 JST (= UTC 0:00)
   workflow_dispatch:      # 手動実行も可能
 
+permissions:
+    contents: write
+
 jobs:
   collect-news:
     runs-on: ubuntu-latest
