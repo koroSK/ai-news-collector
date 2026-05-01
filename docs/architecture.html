@@ -114,6 +114,14 @@
     }
     .node-repo .node-title { color: #f87171; }
 
+    .node-dedup {
+      background: linear-gradient(135deg, #0f1f1f, #0a2e2e);
+      border-color: #14b8a6;
+      box-shadow: 0 0 16px rgba(20,184,166,0.2);
+      width: 200px;
+    }
+    .node-dedup .node-title { color: #2dd4bf; }
+
     /* ===== ARROWS ===== */
     .arrow-down {
       display: flex;
@@ -349,6 +357,26 @@
     <div class="row">
       <div class="arrow-down">
         <div class="arrow-line"></div>
+        <div class="arrow-label">新規URLを記録</div>
+        <div class="arrow-line"></div>
+        <div class="arrow-head"></div>
+      </div>
+    </div>
+
+    <!-- DEDUP -->
+    <div class="row">
+      <div class="node node-dedup">
+        <span class="node-icon">🔍</span>
+        <div class="node-title">重複排除</div>
+        <div class="node-sub">seen_urls.json<br>収集済みURL管理<br>上限 500件</div>
+        <span class="badge" style="background:rgba(20,184,166,0.2);color:#2dd4bf;">Dedup</span>
+      </div>
+    </div>
+
+    <!-- Arrow -->
+    <div class="row">
+      <div class="arrow-down">
+        <div class="arrow-line"></div>
         <div class="arrow-label">git commit & push</div>
         <div class="arrow-line"></div>
         <div class="arrow-head"></div>
@@ -394,6 +422,10 @@
       <div class="spec-item">
         <div class="spec-label">保存形式</div>
         <div class="spec-value">Markdown (.md)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">重複排除</div>
+        <div class="spec-value">seen_urls.json（上限500件）</div>
       </div>
       <div class="spec-item">
         <div class="spec-label">APIキー</div>
